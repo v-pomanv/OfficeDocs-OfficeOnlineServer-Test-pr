@@ -46,6 +46,7 @@
                   "globalMetadata":  {
                                          "breadcrumb_path":  "/office/Web-Apps-Server/breadcrumb/toc.json",
                                          "extendBreadcrumb":  true,
+                                         "uhfheaderid": "MSDocsHeader-Docs",
                                          "ROBOTS":  "INDEX,FOLLOW",
                                          "ms.topic":  "conceptual",
                                          "author":  "dstrome",
