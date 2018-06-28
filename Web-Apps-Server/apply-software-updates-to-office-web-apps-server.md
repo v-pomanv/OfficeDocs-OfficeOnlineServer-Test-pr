@@ -10,7 +10,7 @@ mtps_version: v=office.15
 
 # Apply software updates to Office Web Apps Server
 
- 
+ 
 
 _**Applies to:** Office Web Apps Server_
 
@@ -60,17 +60,17 @@ To apply software updates to a single server Office Web Apps Server farm, remove
 1.  If the update hasn’t been downloaded to the Office Web Apps Server already, download the Office Web Apps Server update that you want to apply from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=280274).
 
 2.  On the Office Web Apps Server that you want to apply the software update to, open the Windows PowerShell prompt as an administrator and run the following command.
-    
+    ```PowerShell
         Remove-OfficeWebAppsMachine
-
+	```
 3.  Install the Office Web Apps Server update on that server. If prompted, restart the server.
 
 4.  Open the Windows PowerShell prompt as an administrator and run the **New-OfficeWebAppsFarm** cmdlet to re-create an Office Web Apps Server farm. The URL you specify for **–InternalURL** is the name of the server that runs Office Web Apps Server, such as **http://Contoso-WAC**. In this case, you would use the same name that you used for the previous Office Web Apps Server farm. Use the same additional parameters that you used when you first created the Office Web Apps Server farm. For example, the **–AllowHttp** parameter configures the farm to use HTTP, and the **–EditingEnabled** parameter enables editing in Office Web Apps when it is used together with SharePoint 2013. The **–EditingEnabled** parameter is not used by Lync Server 2013 or Exchange Server 2013 because those hosts don't support editing.
     
     The code in the following example creates a new Office Web Apps Server farm named http://Contoso-WAC.
-    
+    ```PowerShell
         New-OfficeWebAppsFarm -InternalURL "http://Contoso-WAC" -AllowHttp -EditingEnabled
-    
+    ```
     Additional parameters that configure translation services, proxy servers, clipart support, and Online Viewers are described in [New-OfficeWebAppsFarm](new-officewebappsfarm.md).
 
 ## Apply software updates to a multiple Office Web Apps Server farm
@@ -84,17 +84,17 @@ To apply software updates to a multiple Office Web Apps Server farm, you first r
 2.  Remove the Office Web Apps Server that you want to apply the software update to from the load balancer pool.
 
 3.  On that Office Web Apps Server, open the Windows PowerShell prompt as an administrator and run the following command.
-    
+    ```PowerShell
         Remove-OfficeWebAppsMachine
-
+	```
 4.  Install the Office Web Apps Server update on that server. If prompted, restart the server.
 
 5.  Open the Windows PowerShell prompt as an administrator and create an updated Office Web Apps Server farm by using the cmdlet **New-OfficeWebAppsFarm**. The URL you specify for **–InternalURL** is the name of the server that runs Office Web Apps Server, such as **http://Contoso-WAC**. In this case, you use the same name as the existing Office Web Apps Server farm. Use the same additional parameters that you used when you first created the Office Web Apps Server farm. For example, the **–AllowHttp** parameter configures the farm to use HTTP, and the **–EditingEnabled** parameter enables editing in Office Web Apps when it is used together with SharePoint 2013. The **–EditingEnabled** parameter is not used by Lync Server 2013 or Exchange Server 2013 because those hosts don't support editing.
     
     The code in the following example creates a new Office Web Apps Server farm named http://Contoso-WAC.
-    
+    ```PowerShell
         New-OfficeWebAppsFarm -InternalURL "http://Contoso-WAC" -AllowHttp -EditingEnabled
-    
+    ```
     Additional parameters that configure translation services, proxy servers, clipart support, and Online Viewers are described in [New-OfficeWebAppsFarm](new-officewebappsfarm.md).
 
 6.  Depending on how many servers that you have in the Office Web Apps Server farm, load balance traffic to the new farm. You may delay this step until you have more updated servers to join the farm.
@@ -106,9 +106,9 @@ To apply software updates to a multiple Office Web Apps Server farm, you first r
     2.  Install the Office Web Apps Server update on that server. If prompted, restart the server.
     
     3.  Open the Windows PowerShell prompt as an administrator and run the following command. The **–MachineToJoin** parameter adds the current server to an existing Office Web Apps Server farm. In this case, you want to add the server to the updated Office Web Apps Server farm. So use the computer name of the one of the servers in the updated Office Web Apps Server farm.
-        
+        ```PowerShell
             New-OfficeWebAppsMachine -MachineToJoin "server1.contoso.com"
-
+		```
 ## See also
 
 
