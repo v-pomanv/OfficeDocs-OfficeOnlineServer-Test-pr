@@ -19,7 +19,16 @@ Returns a list of bindings that were created by using **New-SPWOPIBinding** on t
 
 ## Syntax
 
-    Get-SPWOPIBinding [-Action <String>] [-Application <String>] [-AssignmentCollection <SPAssignmentCollection>] [-Extension <String>] [-ProgId <String>] [-Server <String>] [-WOPIZone <String>]
+```PowerShell
+Get-SPWOPIBinding 
+    [-Action <String>] 
+    [-Application <String>] 
+    [-AssignmentCollection <SPAssignmentCollection>] 
+    [-Extension <String>] 
+    [-ProgId <String>] 
+    [-Server <String>] 
+    [-WOPIZone <String>]
+```
 
 ## Detailed Description
 
@@ -107,13 +116,17 @@ SharePoint Management Shell
 
 \--------------EXAMPLE 1-----------------
 
-    Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
+```PowerShell
+Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
+```
 
 This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the WOPI application "Server.corp.Contoso.com." The WOPI application may be the server that runs Office Web Apps Server.
 
 \--------------EXAMPLE 2-----------------
 
-    Get-SPWOPIZone | Get-SPWOPIBinding
+```PowerShell
+Get-SPWOPIZone | Get-SPWOPIBinding
+```
 
 This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the zone configured for the WOPI application.
 

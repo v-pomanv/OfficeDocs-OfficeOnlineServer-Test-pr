@@ -18,7 +18,49 @@ Creates a new Office Web Apps Server farm on the local computer.
 
 ## Syntax
 
-    New-OfficeWebAppsFarm [-AllowCEIP <SwitchParameter>] [-AllowHttp <SwitchParameter>] [-AllowHttpSecureStoreConnections <SwitchParameter>] [-CacheLocation <String>] [-CacheSizeInGB <Nullable>] [-CertificateName <String>] [-ClipartEnabled <SwitchParameter>] [-Confirm [<SwitchParameter>]] [-DocumentInfoCacheSize <Nullable>] [-EditingEnabled <SwitchParameter>] [-ExcelAllowExternalData <SwitchParameter>] [-ExcelConnectionLifetime <Nullable>] [-ExcelExternalDataCacheLifetime <Nullable>] [-ExcelPrivateBytesMax <Nullable>] [-ExcelRequestDurationMax <Nullable>] [-ExcelSessionTimeout <Nullable>] [-ExcelWarnOnDataRefresh <SwitchParameter>] [-ExcelWorkbookSizeMax <Nullable>] [-ExternalURL <String>] [-FarmOU <String>] [-Force <SwitchParameter>] [-InternalURL <String>] [-LogLocation <String>] [-LogRetentionInDays <Nullable>] [-LogVerbosity <String>] [-MaxMemoryCacheSizeInMB <Nullable>] [-MaxTranslationCharacterCount <Nullable>] [-OpenFromUncEnabled <SwitchParameter>] [-OpenFromUrlEnabled <SwitchParameter>] [-OpenFromUrlThrottlingEnabled <SwitchParameter>] [-PicturePasteDisabled <SwitchParameter>] [-Proxy <String>] [-RecycleActiveProcessCount <Nullable>] [-RemovePersonalInformationFromLogs <SwitchParameter>] [-RenderingLocalCacheLocation <String>] [-SSLOffloaded <SwitchParameter>] [-TranslationEnabled <SwitchParameter>] [-TranslationServiceAddress <String>] [-TranslationServiceAppId <String>] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+New-OfficeWebAppsFarm 
+    [-AllowCEIP <SwitchParameter>] 
+    [-AllowHttp <SwitchParameter>] 
+    [-AllowHttpSecureStoreConnections <SwitchParameter>] 
+    [-CacheLocation <String>] 
+    [-CacheSizeInGB <Nullable>] 
+    [-CertificateName <String>] 
+    [-ClipartEnabled <SwitchParameter>] 
+    [-Confirm[<SwitchParameter>]] 
+    [-DocumentInfoCacheSize <Nullable>] 
+    [-EditingEnabled <SwitchParameter>] 
+    [-ExcelAllowExternalData <SwitchParameter>] 
+    [-ExcelConnectionLifetime <Nullable>] 
+    [-ExcelExternalDataCacheLifetime <Nullable>] 
+    [-ExcelPrivateBytesMax <Nullable>] 
+    [-ExcelRequestDurationMax <Nullable>] 
+    [-ExcelSessionTimeout <Nullable>] 
+    [-ExcelWarnOnDataRefresh <SwitchParameter>] 
+    [-ExcelWorkbookSizeMax <Nullable>] 
+    [-ExternalURL <String>] 
+    [-FarmOU <String>] 
+    [-Force <SwitchParameter>] 
+    [-InternalURL <String>] 
+    [-LogLocation <String>] 
+    [-LogRetentionInDays <Nullable>] 
+    [-LogVerbosity <String>] 
+    [-MaxMemoryCacheSizeInMB <Nullable>] 
+    [-MaxTranslationCharacterCount <Nullable>] 
+    [-OpenFromUncEnabled <SwitchParameter>] 
+    [-OpenFromUrlEnabled <SwitchParameter>] 
+    [-OpenFromUrlThrottlingEnabled <SwitchParameter>] 
+    [-PicturePasteDisabled <SwitchParameter>] 
+    [-Proxy <String>] 
+    [-RecycleActiveProcessCount <Nullable>] 
+    [-RemovePersonalInformationFromLogs <SwitchParameter>] 
+    [-RenderingLocalCacheLocation <String>] 
+    [-SSLOffloaded <SwitchParameter>] 
+    [-TranslationEnabled <SwitchParameter>] 
+    [-TranslationServiceAddress <String>] 
+    [-TranslationServiceAppId <String>] 
+    [-WhatIf[<SwitchParameter>]]
+```
 
 ## Detailed Description
 
@@ -360,7 +402,9 @@ The **New-OfficeWebAppsFarm** cmdlet creates a new Office Web Apps Server farm o
 
 \------------------EXAMPLE 1---------------------
 
-    New-OfficeWebAppsFarm -InternalUrl "https://server.corp.contoso.com" -ExternalUrl "https://server.external.contoso.com" -EditingEnabled:$true -SSLOffloaded
+```PowerShell
+New-OfficeWebAppsFarm -InternalUrl "https://server.corp.contoso.com" -ExternalUrl "https://server.external.contoso.com" -EditingEnabled:$true -SSLOffloaded
+```
 
 This example creates an Office Web Apps Server farm on the local server that has editing enabled for Office Web Apps. The farm is configured for load balancing by enabling **SSLOffloaded**, which automatically enables **AllowHttp**. If you are not using a load balancer, make sure that you set **CertificateName**.
 

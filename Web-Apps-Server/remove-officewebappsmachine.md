@@ -19,7 +19,11 @@ Removes the current server from the Office Web Apps Server farm.
 
 ## Syntax
 
-    Remove-OfficeWebAppsMachine [-Confirm [<SwitchParameter>]] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+Remove-OfficeWebAppsMachine 
+      [-Confirm [<SwitchParameter>]] 
+      [-WhatIf [<SwitchParameter>]]
+```
 
 ## Detailed Description
 
@@ -74,7 +78,9 @@ The **Remove-OfficeWebAppsMachine** cmdlet removes the current server from the O
 
 \------------------EXAMPLE 1---------------------
 
-    Remove-OfficeWebAppsMachine
+```
+Remove-OfficeWebAppsMachine
+```
 
 This example removes the current server from the Office Web Apps Server farm.
 

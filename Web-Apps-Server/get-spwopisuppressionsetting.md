@@ -19,7 +19,10 @@ Returns the suppression settings on the current SharePoint farm where this cmdle
 
 ## Syntax
 
-    Get-SPWOPISuppressionSetting [-AssignmentCollection <SPAssignmentCollection>]
+```PowerShell
+Get-SPWOPISuppressionSetting 
+    [-AssignmentCollection <SPAssignmentCollection>]
+```
 
 ## Detailed Description
 
@@ -71,7 +74,9 @@ SharePoint Management Shell
 
 \--------------EXAMPLE-----------------
 
-    Get-SPWOPISuppressionSetting
+```PowerShell
+Get-SPWOPISuppressionSetting
+```
 
 This example returns all the suppression settings on the current SharePoint farm where this cmdlet is run. The suppression settings returned include the **DocType** and **WOPIAction**.
 

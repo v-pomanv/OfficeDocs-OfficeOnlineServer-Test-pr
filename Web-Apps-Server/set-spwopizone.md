@@ -19,7 +19,14 @@ Configures the zone that the current SharePoint farm will use to navigate the br
 
 ## Syntax
 
-    Set-SPWOPIZone [[-Zone] <String>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm [<SwitchParameter>]] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+Set-SPWOPIZone 
+    [[-Zone] <String>] 
+    [-AssignmentCollection <SPAssignmentCollection>] 
+    [-Confirm [<SwitchParameter>]] 
+    [-WhatIf [<SwitchParameter>]]
+```
+
 
 ## Detailed Description
 
@@ -96,7 +103,9 @@ SharePoint Management Shell
 
 \--------------EXAMPLE-----------------
 
-    Set-SPWOPIZone -Zone "external-https"
+```PowerShell
+Set-SPWOPIZone -Zone "external-https"
+```
 
 This example configures the current SharePoint farm to use external connections through HTTPS to the WOPI application (such as a server that runs Office Web Apps Server).
 
