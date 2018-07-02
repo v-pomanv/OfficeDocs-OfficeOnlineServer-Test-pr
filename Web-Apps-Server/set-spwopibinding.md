@@ -19,7 +19,14 @@ Updates the default click action for an application or file name extension bindi
 
 ## Syntax
 
-    Set-SPWOPIBinding [-Identity] <SPWopiBindingPipeBind> -DefaultAction <SwitchParameter> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm [<SwitchParameter>]] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+Set-SPWOPIBinding 
+    [-Identity] <SPWopiBindingPipeBind> 
+    -DefaultAction <SwitchParameter>
+    [-AssignmentCollection <SPAssignmentCollection>] 
+    [-Confirm [<SwitchParameter>]] 
+    [-WhatIf [<SwitchParameter>]]
+```    
 
 ## Detailed Description
 
@@ -104,7 +111,9 @@ SharePoint Management Shell
 
 \--------------EXAMPLE-----------------
 
-    Get-SPWOPIBinding -Action "view" -Application "Word"| Set-SPWOPIBinding -DefaultAction
+```PowerShell
+Get-SPWOPIBinding -Action "view" -Application "Word"| Set-SPWOPIBinding -DefaultAction
+```
 
 This example sets the default click action to view for a Word document in a SharePoint library. You can verify that the default click action is set to view for Word by running the cmdlet **Get-SPWOPIBinding –Action “view” –Application “Word”**. The **IsDefaultAction** value is set to “True.”
 

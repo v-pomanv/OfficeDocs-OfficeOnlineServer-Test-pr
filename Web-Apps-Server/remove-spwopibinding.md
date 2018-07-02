@@ -19,11 +19,34 @@ Removes bindings for applications, file name extensions, and their associated ac
 
 ## Syntax
 
-    Remove-SPWOPIBinding [[-Identity] <SPWopiBindingPipeBind>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm [<SwitchParameter>]] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+Remove-SPWOPIBinding 
+      [[-Identity] <SPWopiBindingPipeBind>] 
+      [-AssignmentCollection <SPAssignmentCollection>] 
+      [-Confirm[<SwitchParameter>]] 
+      [-WhatIf[<SwitchParameter>]]
+```
 
-    Remove-SPWOPIBinding [-Action <String>] [-Application <String>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm [<SwitchParameter>]] [-Extension <String>] [-ProgId <String>] [-Server <String>] [-WhatIf [<SwitchParameter>]] [-WOPIZone <String>]
+```PowerShell
+Remove-SPWOPIBinding 
+      [-Action <String>] 
+      [-Application <String>] 
+      [-AssignmentCollection <SPAssignmentCollection>] 
+      [-Confirm[<SwitchParameter>]] 
+      [-Extension <String>] 
+      [-ProgId <String>] 
+      [-Server <String>] 
+      [-WhatIf[<SwitchParameter>]] 
+      [-WOPIZone <String>]
+```
 
-    Remove-SPWOPIBinding [-All <SwitchParameter>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm [<SwitchParameter>]] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+Remove-SPWOPIBinding 
+      [-All <SwitchParameter>] 
+      [-AssignmentCollection <SPAssignmentCollection>] 
+      [-Confirm[<SwitchParameter>]] 
+      [-WhatIf[<SwitchParameter>]]
+```
 
 ## Detailed Description
 
@@ -137,19 +160,26 @@ SharePoint Management Shell
 
 \--------------EXAMPLE 1-----------------
 
-    Remove-SPWOPIBinding -Application "Excel"
+```PowerShell
+Remove-SPWOPIBinding -Application "Excel"
+```
 
 This example removes all bindings for Excel on the current SharePoint farm where this cmdlet is run.
 
 \--------------EXAMPLE 2-----------------
 
-    Remove-SPWOPIBinding -All:$true
+```PowerShell
+Remove-SPWOPIBinding -All:$true
+```
+
 
 This example removes all bindings on the current SharePoint farm where this cmdlet is run.
 
 \--------------EXAMPLE 3-----------------
 
-    Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
+```PowerShell
+Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
+```
 
 This example removes all bindings for Office Mobile Web Apps on the current SharePoint farm where this cmdlet is run.
 

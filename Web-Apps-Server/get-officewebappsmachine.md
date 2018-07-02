@@ -19,7 +19,9 @@ Returns details about the current server that is in an Office Web Apps Server fa
 
 ## Syntax
 
-    Get-OfficeWebAppsMachine
+```PowerShell
+Get-OfficeWebAppsMachine
+```
 
 ## Detailed Description
 
@@ -35,13 +37,17 @@ The **Get-OfficeWebAppsMachine** cmdlet returns details about the current server
 
 \------------------EXAMPLE 1---------------------
 
-    Get-OfficeWebAppsMachine
+```PowerShell
+Get-OfficeWebAppsMachine
+```
 
 This example returns details about the current server that is in a Office Web Apps Server farm.
 
 \------------------EXAMPLE 2---------------------
 
-    (Get-OfficeWebAppsFarm).Machines
+```PowerShell
+(Get-OfficeWebAppsFarm).Machines
+```
 
 This example returns details about all servers that are in a Office Web Apps Server farm.
 

@@ -19,7 +19,15 @@ The **New-SPWOPISuppressionSetting** cmdlet turns off Office Web Apps for the ac
 
 ## Syntax
 
-    New-SPWOPISuppressionSetting [-Action <String>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm [<SwitchParameter>]] [-Extension <String>] [-ProgId <String>] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+New-SPWOPISuppressionSetting 
+    [-Action <String>] 
+    [-AssignmentCollection <SPAssignmentCollection>] 
+    [-Confirm[<SwitchParameter>]] 
+    [-Extension <String>] 
+    [-ProgId <String>] 
+    [-WhatIf[<SwitchParameter>]]
+```
 
 ## Detailed Description
 
@@ -101,9 +109,10 @@ SharePoint Management Shell
 
 \--------------EXAMPLE 1-----------------
 
-    New-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
-
-    New-SPWOPISuppressionSetting -Extension "XLS" -Action "view"
+```PowerShell
+New-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
+New-SPWOPISuppressionSetting -Extension "XLS" -Action "view"
+```
 
 This example turns off the ability of a user to use Office Web Apps to view Excel workbooks that have file name extensions “.xlsx” or “.xls”.
 

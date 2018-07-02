@@ -19,7 +19,12 @@ Removes all servers flagged as unhealthy from an Office Web Apps Server farm.
 
 ## Syntax
 
-    Repair-OfficeWebAppsFarm [-Confirm [<SwitchParameter>]] [-Force <SwitchParameter>] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+Repair-OfficeWebAppsFarm 
+      [-Confirm [<SwitchParameter>]] 
+      [-Force <SwitchParameter>] 
+      [-WhatIf [<SwitchParameter>]]
+```
 
 ## Detailed Description
 
@@ -76,13 +81,17 @@ If there are multiple unhealthy servers, you are prompted before each server is 
 
 \------------------EXAMPLE 1---------------------
 
-    (Get-OfficeWebAppsFarm).Machines
+```PowerShell
+(Get-OfficeWebAppsFarm).Machines
+```
 
 This example displays the health status of all servers in the Office Web Apps Server farm.
 
 \------------------EXAMPLE 2---------------------
 
-    Repair-OfficeWebAppsFarm
+```PowerShell
+Repair-OfficeWebAppsFarm
+```
 
 This example removes all unhealthy servers from the Office Web Apps Server farm.
 

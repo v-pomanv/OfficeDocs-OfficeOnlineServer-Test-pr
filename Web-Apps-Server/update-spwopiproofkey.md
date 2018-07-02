@@ -19,7 +19,11 @@ Updates the public key that is used to connect to the WOPI application on the cu
 
 ## Syntax
 
-    Update-SPWOPIProofKey [-AssignmentCollection <SPAssignmentCollection>] [-ServerName <String>]
+```PowerShell
+Update-SPWOPIProofKey 
+  [-AssignmentCollection <SPAssignmentCollection>] 
+  [-ServerName <String>]
+```
 
 ## Detailed Description
 
@@ -77,7 +81,9 @@ SharePoint Management Shell
 
 \--------------EXAMPLE-----------------
 
-    Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
+```PowerShell
+Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
+```
 
 This example obtains the current public key from the WOPI application (such as a server that runs Office Web Apps Server) and updates the key that is stored on the SharePoint farm.
 

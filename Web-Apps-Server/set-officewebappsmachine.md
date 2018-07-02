@@ -19,7 +19,12 @@ Changes the settings of the current server that is in an Office Web Apps Server 
 
 ## Syntax
 
-    Set-OfficeWebAppsMachine [-Confirm [<SwitchParameter>]] [-Master <String>] [-Roles <String[]>] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+Set-OfficeWebAppsMachine 
+    [-Confirm [<SwitchParameter>]] 
+    [-Master <String>] [-Roles <String[]>] 
+    [-WhatIf [<SwitchParameter>]]
+```
 
 ## Detailed Description
 
@@ -95,19 +100,25 @@ The **Set-OfficeWebAppsMachine** cmdlet changes the settings of the current serv
 
 \------------------EXAMPLE 1---------------------
 
-    (Get-OfficeWebAppsFarm).Machines
+```PowerShell
+(Get-OfficeWebAppsFarm).Machines
+```
 
 This example shows the roles held by each server in the Office Web Apps Server farm.
 
 \------------------EXAMPLE 2---------------------
 
-    Set-OfficeWebAppsMachine -Roles FrontEnd
+```PowerShell
+Set-OfficeWebAppsMachine -Roles FrontEnd
+```
 
 This example configures the current server as a Front End server.
 
 \------------------EXAMPLE 3---------------------
 
-    Set-OfficeWebAppsMachine -Roles All
+```PowerShell
+Set-OfficeWebAppsMachine -Roles All
+```
 
 This example configures the current server to host all roles.
 
