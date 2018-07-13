@@ -19,7 +19,20 @@ Creates a new binding to associate file name extensions or applications with act
 
 ## Syntax
 
-    New-SPWOPIBinding -ServerName <String> [-Action <String>] [-AllowHTTP <SwitchParameter>] [-Application <String>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm [<SwitchParameter>]] [-Extension <String>] [-FileName <String>] [-ProgId <String>] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+New-SPWOPIBinding 
+    -ServerName <String> 
+    [-Action <String>] 
+    [-AllowHTTP <SwitchParameter>] 
+    [-Application <String>] 
+    [-AssignmentCollection <SPAssignmentCollection>] 
+    [-Confirm[<SwitchParameter>]] 
+    [-Extension <String>] 
+    [-FileName <String>] 
+    [-ProgId <String>] 
+    [-WhatIf[<SwitchParameter>]]
+```
+   
 
 ## Detailed Description
 
@@ -129,13 +142,17 @@ SharePoint Management Shell
 
 \--------------EXAMPLE 1-----------------
 
-    New-SPWOPIBinding -ServerName "Server.corp.Contoso.com"
+```PowerShell
+New-SPWOPIBinding -ServerName "Server.corp.Contoso.com"
+```
 
 This example creates bindings for all the applications and file name extensions that the WOPI application supports on the current SharePoint farm where this cmdlet is run.
 
 \--------------EXAMPLE 2-----------------
 
-    New-SPWOPIBinding -ServerName "Server.corp.Contoso.com" -Application "Excel"
+```PowerShell
+New-SPWOPIBinding -ServerName "Server.corp.Contoso.com" -Application "Excel"
+```
 
 This example associates Excel with all the actions that the WOPI application supports for Excel on the current SharePoint farm where this cmdlet is run.
 

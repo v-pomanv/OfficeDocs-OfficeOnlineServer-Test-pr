@@ -19,7 +19,10 @@ Adds a host domain to the Allow List for an Office Web Apps Server farm.
 
 ## Syntax
 
-    New-OfficeWebAppsHost -Domain <String>
+```PowerShell
+New-OfficeWebAppsHost 
+    -Domain <String>
+```
 
 ## Detailed Description
 
@@ -76,7 +79,9 @@ The wildcard \* is assumed for any domain that is added to the Allow List so tha
 
 \------------------EXAMPLE 1---------------------
 
-    New-OfficeWebAppsHost -domain "contoso.com"
+```PowerShell
+New-OfficeWebAppsHost -domain "contoso.com"
+```
 
 This example adds the domain contoso.com to the Allow List.
 

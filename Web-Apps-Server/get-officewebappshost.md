@@ -19,7 +19,9 @@ Returns the list of host domains that are on the Allow List for an Office Web Ap
 
 ## Syntax
 
-    Get-OfficeWebAppsHost
+```PowerShell
+Get-OfficeWebAppsHost
+```
 
 ## Detailed Description
 
@@ -43,7 +45,9 @@ The wildcard \* is assumed for any domain that appears on the Allow List so that
 
 \------------------EXAMPLE 1---------------------
 
-    Get-OfficeWebAppsHost
+```PowerShell
+Get-OfficeWebAppsHost
+```
 
 This example returns the host domains that are on the Allow List.
 

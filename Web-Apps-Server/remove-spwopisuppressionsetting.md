@@ -19,9 +19,21 @@ Removes the suppression settings for a file name extension or programmatic ID an
 
 ## Syntax
 
-    Remove-SPWOPISuppressionSetting [-Action <String>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm [<SwitchParameter>]] [-Extension <String>] [-ProgId <String>] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+Remove-SPWOPISuppressionSetting 
+      [-Action <String>] 
+      [-AssignmentCollection <SPAssignmentCollection>] 
+      [-Confirm [<SwitchParameter>]] [-Extension <String>] 
+      [-ProgId <String>] 
+      [-WhatIf [<SwitchParameter>]]
+```      
 
-    Remove-SPWOPISuppressionSetting [-AssignmentCollection <SPAssignmentCollection>] [-Confirm [<SwitchParameter>]] [-Identity <String>] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+Remove-SPWOPISuppressionSetting 
+       [-AssignmentCollection <SPAssignmentCollection>] 
+       [-Confirm [<SwitchParameter>]] [-Identity <String>] 
+       [-WhatIf [<SwitchParameter>]]
+```
 
 ## Detailed Description
 
@@ -110,13 +122,17 @@ SharePoint Management Shell
 
 \--------------EXAMPLE 1-----------------
 
-    Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
+```PowerShell
+Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
+```
 
 This example removes suppression settings for viewing Excel workbooks that have the file name extension “.xlsx.”
 
 \--------------EXAMPLE 2-----------------
 
-    Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
+```PowerShell
+Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
+```
 
 This example removes all suppression settings on the current SharePoint farm where this cmdlet is run.
 

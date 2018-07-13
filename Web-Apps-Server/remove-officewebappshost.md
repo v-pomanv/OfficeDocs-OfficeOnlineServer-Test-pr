@@ -19,7 +19,10 @@ Removes a host domain from the Allow List for an Office Web Apps Server farm.
 
 ## Syntax
 
-    Remove-OfficeWebAppsHost -Domain <String>
+```PowerShell
+Remove-OfficeWebAppsHost 
+      -Domain <String>
+```
 
 ## Detailed Description
 
@@ -68,7 +71,9 @@ The **Remove-OfficeWebAppsHost** cmdlet removes the specified host domain from t
 
 \------------------EXAMPLE 1---------------------
 
-    Remove-OfficeWebAppsHost -domain "contoso.com"
+```PowerShell
+Remove-OfficeWebAppsHost -domain "contoso.com"
+```
 
 This example removes the domain contoso.com from the Allow List.
 

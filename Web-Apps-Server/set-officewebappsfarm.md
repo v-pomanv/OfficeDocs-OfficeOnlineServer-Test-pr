@@ -19,7 +19,48 @@ Configures the settings of an existing Office Web Apps Server farm.
 
 ## Syntax
 
-    Set-OfficeWebAppsFarm [-AllowCEIP <SwitchParameter>] [-AllowHttp <SwitchParameter>] [-AllowHttpSecureStoreConnections <SwitchParameter>] [-CacheLocation <String>] [-CacheSizeInGB <Nullable>] [-CertificateName <String>] [-ClipartEnabled <SwitchParameter>] [-Confirm [<SwitchParameter>]] [-DocumentInfoCacheSize <Nullable>] [-EditingEnabled <SwitchParameter>] [-ExcelAllowExternalData <SwitchParameter>] [-ExcelConnectionLifetime <Nullable>] [-ExcelExternalDataCacheLifetime <Nullable>] [-ExcelPrivateBytesMax <Nullable>] [-ExcelRequestDurationMax <Nullable>] [-ExcelSessionTimeout <Nullable>] [-ExcelWarnOnDataRefresh <SwitchParameter>] [-ExcelWorkbookSizeMax <Nullable>] [-ExternalURL <String>] [-FarmOU <String>] [-Force <SwitchParameter>] [-InternalURL <String>] [-LogLocation <String>] [-LogRetentionInDays <Nullable>] [-LogVerbosity <String>] [-MaxMemoryCacheSizeInMB <Nullable>] [-MaxTranslationCharacterCount <Nullable>] [-OpenFromUncEnabled <SwitchParameter>] [-OpenFromUrlEnabled <SwitchParameter>] [-OpenFromUrlThrottlingEnabled <SwitchParameter>] [-PicturePasteDisabled <SwitchParameter>] [-Proxy <String>] [-RecycleActiveProcessCount <Nullable>] [-RemovePersonalInformationFromLogs <SwitchParameter>] [-RenderingLocalCacheLocation <String>] [-SSLOffloaded <SwitchParameter>] [-TranslationEnabled <SwitchParameter>] [-TranslationServiceAddress <String>] [-TranslationServiceAppId <String>] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+Set-OfficeWebAppsFarm 
+    [-AllowCEIP <SwitchParameter>] 
+    [-AllowHttp <SwitchParameter>] 
+    [-AllowHttpSecureStoreConnections <SwitchParameter>] 
+    [-CacheLocation <String>] 
+    [-CacheSizeInGB <Nullable>]
+    [-CertificateName <String>] 
+    [-ClipartEnabled <SwitchParameter>] 
+    [-Confirm [<SwitchParameter>]] 
+    [-DocumentInfoCacheSize <Nullable>] 
+    [-EditingEnabled <SwitchParameter>] 
+    [-ExcelAllowExternalData <SwitchParameter>] 
+    [-ExcelConnectionLifetime <Nullable>] 
+    [-ExcelExternalDataCacheLifetime <Nullable>]
+    [-ExcelPrivateBytesMax <Nullable>] 
+    [-ExcelRequestDurationMax <Nullable>] 
+    [-ExcelSessionTimeout <Nullable>] 
+    [-ExcelWarnOnDataRefresh <SwitchParameter>] 
+    [-ExcelWorkbookSizeMax <Nullable>] 
+    [-ExternalURL <String>] [-FarmOU <String>] 
+    [-Force <SwitchParameter>] 
+    [-InternalURL <String>] 
+    [-LogLocation <String>] 
+    [-LogRetentionInDays <Nullable>] 
+    [-LogVerbosity <String>] 
+    [-MaxMemoryCacheSizeInMB <Nullable>] 
+    [-MaxTranslationCharacterCount <Nullable>] 
+    [-OpenFromUncEnabled <SwitchParameter>] 
+    [-OpenFromUrlEnabled <SwitchParameter>]  
+    [-OpenFromUrlThrottlingEnabled <SwitchParameter>] 
+    [-PicturePasteDisabled <SwitchParameter>] 
+    [-Proxy <String>] 
+    [-RecycleActiveProcessCount <Nullable>] 
+    [-RemovePersonalInformationFromLogs <SwitchParameter>] 
+    [-RenderingLocalCacheLocation <String>] 
+    [-SSLOffloaded <SwitchParameter>] 
+    [-TranslationEnabled <SwitchParameter>] 
+    [-TranslationServiceAddress <String>] 
+    [-TranslationServiceAppId <String>] 
+    [-WhatIf [<SwitchParameter>]]
+```    
 
 ## Detailed Description
 
@@ -422,19 +463,25 @@ The **Set-OfficeWebAppsFarm** cmdlet configures the settings of an existing Offi
 
 \------------------EXAMPLE 1---------------------
 
-    Set-OfficeWebAppsFarm -ClipartEnabled:$true
+```PowerShell
+Set-OfficeWebAppsFarm -ClipartEnabled:$true
+```
 
 This example enables insertion of clip art from Office.com.
 
 \------------------EXAMPLE 2---------------------
 
-    Set-OfficeWebAppsFarm -EditingEnabled:$true
+```PowerShell
+Set-OfficeWebAppsFarm -EditingEnabled:$true
+```
 
 This example enables edit functionality for Office Web Apps.
 
 \------------------EXAMPLE 3---------------------
 
-    Set-OfficeWebAppsFarm -OpenFromUncEnabled:$false
+```PowerShell
+Set-OfficeWebAppsFarm -OpenFromUncEnabled:$false
+```
 
 This example turns off the ability to view any Office file from a UNC path.
 

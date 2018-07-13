@@ -19,7 +19,14 @@ Adds the current server to an existing Office Web Apps Server farm.
 
 ## Syntax
 
-    New-OfficeWebAppsMachine [-MachineToJoin] <String> [-Confirm [<SwitchParameter>]] [-Force <SwitchParameter>] [-Roles <String[]>] [-WhatIf [<SwitchParameter>]]
+```PowerShell
+New-OfficeWebAppsMachine 
+    [-MachineToJoin] <String> 
+    [-Confirm[<SwitchParameter>]] 
+    [-Force <SwitchParameter>] 
+    [-Roles <String[]>] 
+    [-WhatIf[<SwitchParameter>]]
+```
 
 ## Detailed Description
 
@@ -98,7 +105,9 @@ The **New-OfficeWebAppsMachine** cmdlet adds the current server to an existing O
 
 \------------------EXAMPLE 1---------------------
 
-    New-OfficeWebAppsMachine -MachineToJoin server1.contoso.com
+```PowerShell
+New-OfficeWebAppsMachine -MachineToJoin server1.contoso.com
+```
 
 This example adds the current server to the Office Web Apps Server farm that is running on the server named server1.contoso.com.
 
